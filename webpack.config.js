@@ -1,7 +1,7 @@
-const path = require('path');
-const { VueLoaderPlugin } = require('vue-loader');
-const HtmlPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const path = require('path')
+const { VueLoaderPlugin } = require('vue-loader')
+const HtmlPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     resolve: {
@@ -17,6 +17,11 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                excludes: /node_modules/,
+                use: 'babel-loader'
+            },
             {
                 test: /\.vue$/,
                 use: 'vue-loader'
@@ -41,5 +46,8 @@ module.exports = {
                 { from: 'static' }
             ]
         })
-    ]
+    ],
+    devServer: {
+        historyApiFallback: true
+    }
 }
