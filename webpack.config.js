@@ -19,7 +19,7 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                excludes: /node_modules/,
+                exclude: /node_modules/,
                 use: 'babel-loader'
             },
             {
@@ -31,6 +31,7 @@ module.exports = {
                 use: [
                     'vue-style-loader',
                     'css-loader',
+                    'postcss-loader',
                     'sass-loader'
                 ]
             }   

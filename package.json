@@ -2,7 +2,6 @@
   "name": "vue-webpack",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development",
     "build": "webpack --mode production"
@@ -38,6 +37,8 @@
     "webpack-dev-server": "^4.3.0"
   },
   "dependencies": {
-    "vue": "^3.2.19"
+    "vue": "^3.2.19",
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.2"
   }
 }
